@@ -1,2 +1,3 @@
-# student_management_system
-学生宿舍管理系统
+#  data_struction
+
+数据结构相关算法
