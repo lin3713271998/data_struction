@@ -3,8 +3,8 @@ typedef struct{
 				int a[MAX];
 				int size;
               }list_a,list_b,list_c; 
-/*先把c表初始化，把c置空*/
-/*合并*/
+/*鍏堟妸c琛ㄥ垵濮嬪寲锛屾妸c缃┖*/
+/*鍚堝苟*/
 int sum(list_a *slt1,list_b *slt2,list_c *slt3) 
 {int i,j,t=1;
 for(i=1;i<=slt1->size;i++)
