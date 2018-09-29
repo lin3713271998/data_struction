@@ -18,16 +18,16 @@ int n;
 int Tips()
 {
     int p;
-    printf("<----------链表学生管理系统功能实现--------------->\n");
+    printf("<-----链表学生管理系统功能实现------>\n");
     printf("<----------1.添加------------------->\n");
     printf("<----------2.删除------------------->\n");
     printf("<----------3.查找------------------->\n");
     printf("<----------4.逆转输出--------------->\n");
-    printf("<----------5.删除之间--------------->\n");
+    printf("<----------5.删除XY之间------------->\n");
     printf("<----------6.打印输出--------------->\n");
     printf("<----------7.结点数----------------->\n");
     printf("<----------8.插入到后面------------->\n");
-    printf("<----------0.退出--------------------------------->\n");
+    printf("<----------0.退出------------------->\n");
    
     scanf("%d",&p);
     return p;
@@ -174,7 +174,8 @@ void delin(stu * head)
            p=p->next;
 		 }
     }
-
+    printf("删除结果为：\n");
+print(head);
 }
 
 //插入
@@ -210,6 +211,27 @@ void insert(stu *head)
 //	int dorm;//宿舍号
 //    struct student *next;
 //}stu;
+/*转制*/ 
+void rever(stu *head)
+{
+  stu *p,*q,*s;
+  q=head;
+  p=q->next;
+  s=p->next;
+  
+while (s->next!=NULL)
+{
+p->next=q;
+q=p;
+p=s;
+s=p->next;
+}
+s->next=p;
+p->next=q;
+head->next=NULL;
+head=s;
+print(head);
+}
 
 /*主函数*/
 int main()
@@ -269,7 +291,9 @@ int main()
             
             case 4:{//逆转输出 
             	system("cls");
-            	save(head);
+            	rever(head);
+            	getch();
+				break; 
 		           }
 		    case 5:{ 
             	system("cls");
